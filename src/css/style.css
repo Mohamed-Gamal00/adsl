@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200;300;400;500;600;700;800&family=Readex+Pro:wght@200;300;400;500&display=swap');
+
+* {
+  font-family: 'Almarai', sans-serif;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.erroe-feedbak {
+  color: red
+}
+
+.fs-20 {
+  font-size: 20px !important;
+}
+
+.fw-900 {
+  font-weight: 900 !important;
+}
