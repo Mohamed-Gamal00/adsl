@@ -1,13 +1,20 @@
 <template>
   <!-- Navbar & Hero Start -->
-  <div class="style sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <!-- <div class="style sticky-top"> -->
+  <div class="style">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <router-link class="navbar-brand" :to="{ name: 'home' }">
-          <img src="@/assets/adsl/logo.png" width="50" height="50" alt="img" />
+          <img
+            loading="lazy"
+            src="@/assets/adsl/logo.png"
+            width="50"
+            height="50"
+            alt="img"
+          />
         </router-link>
         <span
-          style="background-color: #ef4823; color: white"
+          style="background-color: #ffbe03; color: white"
           class="navbar-toggler p-2"
           type="button"
           data-bs-toggle="collapse"
@@ -43,12 +50,20 @@
               ><span class="fw-bold">من نحن</span></router-link
             >
           </div>
+
           <router-link class="m-2 border-0" :to="{ name: 'ordernow' }" exact>
-            <span
-              style="background-color: #ef4823; height: 43px"
-              class="btn border-0 text-light fw-bold rounded-pill py-2 px-4"
-              >اطلب الان</span
+            <button
+              style="
+                background-color: #ffbe03;
+                width: 160px;
+                height: 50px;
+                border-radius: 12px;
+              "
+              class="btn fw-bold mb-4 text-dark"
             >
+              <!-- <FontAwesome icon="circle-arrow-left" class="ms-2" /> -->
+              تسجيل دخول
+            </button>
           </router-link>
         </div>
       </div>
@@ -77,11 +92,10 @@ export default {
   transition: all 0.2s ease-in-out;
 }
 .nav a:hover {
-  color: #f53105 !important;
+  color: #ffbe03 !important;
 }
 .nav .router-link-exact-active {
-  border-bottom: 3px solid #ef4823 !important;
-  color: #ef4823 !important;
+  color: #ffbe03 !important;
 }
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);

@@ -16,6 +16,7 @@
                     <div style="position: relative; bottom: 30px">
                       <span class="">
                         <img
+                          loading="lazy"
                           src="@/assets/adsl/logo.png"
                           width="100"
                           height="100"

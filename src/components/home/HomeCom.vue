@@ -1,46 +1,47 @@
 <template>
-  <NavBarCom />
   <!-- <div v-if="loading">
     <div>
       <PageLoader />
     </div>
   </div> -->
-  <div class="home mt-4" style="direction: rtl" id="home">
+  <div class="home" style="direction: rtl" id="home">
     <!-- text and image -->
-    <div class="container-fluid">
+    <NavBarCom />
+    <div
+      class="container-fluid bg-header row align-items-center vh-100 m-0 p-0"
+    >
       <div class="row d-flex justify-content-center">
         <div class="col-md-10">
           <div class="row align-items-center justify-content-between mb-2">
             <div class="col-lg-5 fw-bold align-middle text-center text-lg-end">
-              <h2
-                class="mb-4 font_h1 fw-bold"
-                style="font-weight: 900 !important"
-              >
-                مركز العسقلاني
-              </h2>
-              <p class="pb-3 font_p_home" style="color: #1f1e1e">
-                سجل الأن واحصل علي شريحتك
-              </p>
-              <p class="pb-3 font_p_home" style="color: #1f1e1e">
+              <h1 class="pb-3 lh-lg" style="color: #1f1e1e">
+                <strong>
+                  سجل الأن واحصل علي <span style="color: #3aa8f5">شريحتك</span>
+                </strong>
+              </h1>
+              <p class="pb-3" style="color: #1f1e1e">
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
                 هذا النص من مولد النص العربى
               </p>
-              <a
-                href=""
-                aria-label="contact"
-                style="background-color: #f48928"
-                class="btn fw-bold mb-4 text-light rounded-pill border-2 py-3 px-4"
+              <button
+                style="
+                  background-color: #ffbe03;
+                  width: 160px;
+                  height: 50px;
+                  border-radius: 12px;
+                "
+                class="btn fw-bold mb-4 text-dark"
               >
-                <FontAwesome icon="circle-arrow-left" class="ms-2" />
-                تسجيل دخول</a
-              >
+                <!-- <FontAwesome icon="circle-arrow-left" class="ms-2" /> -->
+                تسجيل دخول
+              </button>
             </div>
             <div class="col-lg-6 text-center mt-sm-4 text-lg-start">
-              <img
+              <!-- <img loading="lazy"
                 class="img-fluid rounded-3"
                 src="../../assets/adsl/img1.png"
                 alt="img"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -53,11 +54,15 @@
           <div class="col-md-10">
             <div class="row justify-content-center text-center">
               <div>
-                <h3 class="fw-bold fs-20">ما يميزنا</h3>
+                <strong>
+                  <h3 class="fw-900" style="color: #3aa8f5; font-size: 30px">
+                    ما يميزنا
+                  </h3>
+                </strong>
+                <!-- <h3 class="fw-bold fs-20">ما يميزنا</h3> -->
                 <p class="fs-30 fw-bold">هذا النص هو مثال لنص يمكن أن يستبدل</p>
               </div>
             </div>
-            >
           </div>
         </div>
         <div class="row justify-content-center">
@@ -72,10 +77,10 @@
                       height: 100px;
                       border-radius: 16px;
                       background-color: #fde7d4;
-                      color: #f48928;
+                      color: #ffbe03;
                     "
                   >
-                    <img :src="card.image" alt="img" />
+                    <img loading="lazy" :src="card.image" alt="img" />
                   </div>
                   <p class="fs-18g my-3">
                     {{ card.title }}
@@ -97,34 +102,31 @@
           <div class="col-md-10">
             <div class="row justify-content-center text-center">
               <div>
-                <h3 class="fw-bold fs-20">الإشتراكات</h3>
+                <strong>
+                  <h3 class="fw-900" style="color: #ffbe03; font-size: 30px">
+                    الإشتراكات
+                  </h3>
+                </strong>
                 <p class="fs-30 fw-bold">هذا النص هو مثال لنص يمكن أن يستبدل</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-12">
+        <div class="row justify-content-center mt-lg-4">
+          <div class="col-md-10">
             <div class="row justify-content-around text-center">
               <div
                 class="col-md-3"
                 v-for="subscrip in subscriptions"
                 :key="subscrip.id"
               >
-                <div class="text-center position-relative">
+                <div class="card border-0 text-center subscriptions">
                   <div
-                    class="mx-auto rounded-4 d-flex align-items-center justify-content-center"
-                    style="
-                      width: 100px;
-                      height: 100px;
-                      border-radius: 16px;
-                      background-color: #fde7d4;
-                      color: #f48928;
-                    "
+                    class="mx-auto d-flex align-items-center justify-content-center"
                   >
-                    <img :src="subscrip.image" alt="img" />
+                    <img loading="lazy" :src="subscrip.image" alt="img" />
                   </div>
-                  <p class="fs-18 my-5">
+                  <p class="fs-18 my-3 fw-900" style="color: #1176c9">
                     {{ subscrip.title }}
                   </p>
                 </div>
@@ -135,7 +137,7 @@
       </div>
     </section>
     <!-- text and image -->
-    <div class="container-fluid" style="position: relative">
+    <div class="container-fluid py-5" style="position: relative">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10">
           <div class="row align-items-center justify-content-between mb-2">
@@ -143,16 +145,17 @@
               <div class="circleshape"></div>
               <div class="circle"></div>
 
-              <p class="pb-3 font_p_home" style="color: #1f1e1e">
+              <p class="pb-3" style="color: #1f1e1e">
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة
               </p>
-              <p class="pb-3 font_p_home" style="color: #1f1e1e">
+              <p class="pb-3" style="color: #1f1e1e">
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
                 هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
               </p>
             </div>
             <div class="col-lg-6 text-center mt-sm-4 text-lg-start">
               <img
+                loading="lazy"
                 class="img-fluid rounded-3"
                 src="../../assets/adsl/card.png"
                 alt="img"
@@ -167,13 +170,16 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-10">
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center my-4">
               <div>
-                <h3 class="fw-bold fs-20 d-inline">المضافة حديثاً</h3>
-                <span class="float-start">عرض الكل</span>
-                <p class="fs-30 fw-bold mt-1">
-                  هذا النص هو مثال لنص يمكن أن يستبدل
-                </p>
+                <strong>
+                  <h3 class="fw-900" style="color: #3aa8f5; font-size: 30px">
+                    المضافة حديثاً
+                  </h3>
+                </strong>
+                <span class="float-start fw-bold" style="color: #3aa8f5"
+                  >عرض الكل</span
+                >
               </div>
             </div>
           </div>
@@ -186,18 +192,11 @@
                 v-for="news in News"
                 :key="news.id"
               >
-                <div
-                  class="card rounded-5"
-                  style="
-                    width: 18rem;
-                    border-radius: 26px;
-                    box-shadow: 0px 0px 12px rgba(255, 190, 3, 0.2);
-                  "
-                >
+                <div class="card rounded-5 add-News">
                   <div
                     class="mx-auto rounded-4 mt-3 d-flex align-items-center justify-content-center"
                   >
-                    <img :src="news.image" alt="img" />
+                    <img loading="lazy" :src="news.image" alt="img" />
                   </div>
                   <div class="card-body">
                     <p class="fs-18 mb-0">
@@ -227,7 +226,7 @@
                   <div
                     class="mx-auto rounded-4 d-flex align-items-center justify-content-center"
                   >
-                    <img :src="news.image" alt="img" />
+                    <img loading="lazy" :src="news.image" alt="img" />
                   </div>
                   <p class="fs-18 mt-5">
                     {{ news.title }}
@@ -254,7 +253,7 @@
                 >
                   حمل التطبيق واحصل علي شريحتك
                 </h2>
-                <p class="pb-3 font_p_home" style="color: #1f1e1e">
+                <p class="pb-3" style="color: #1f1e1e">
                   هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
                   توليد هذا النص من مولد
                 </p>
@@ -282,6 +281,7 @@
                 class="col-lg-5 fw-bold align-middle text-center text-lg-end"
               >
                 <img
+                  loading="lazy"
                   class="img-fluid"
                   src="@/assets/adsl/mobile.png"
                   alt="img"
@@ -312,6 +312,7 @@
                   "
                 >
                   <img
+                    loading="lazy"
                     width="50"
                     height="50"
                     src="@/assets/adsl/whatsapp.png"
@@ -422,6 +423,12 @@ export default {
 <style scoped>
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .bg-header {
+    background-image: url("@/assets/adsl/header.png");
+    background-position: left; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: initial;
+  }
   .circleshape {
     z-index: 1;
     position: absolute;
@@ -458,6 +465,7 @@ export default {
     width: 30%;
   }
 }
+
 .home {
   direction: rtl;
   color: #1f1e1e !important;
@@ -475,6 +483,10 @@ a {
   padding-left: 2.8125rem;
   -webkit-transition: border-color 0.25s ease-in-out,
     background-color 0.25s ease-in-out;
+  -webkit-transition: border-color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
+  -o-transition: border-color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
   transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
   border: 1px solid #e7e7e7;
   background-position: center left 0.75rem;
@@ -483,6 +495,8 @@ a {
   background-repeat: no-repeat;
   text-decoration: none;
   margin: 2px 2px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   border-radius: 12px;
 }
@@ -515,8 +529,40 @@ a {
   border-left: 0;
   border-right: 0;
   border-style: solid;
-  -o-border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+  -o-border-image: -o-linear-gradient(left, darkblue, darkorchid) 1;
+  border-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#ffffff05),
+      to(white)
+    )
+    1;
   border-image: linear-gradient(to right, #ffffff05, white) 1;
   padding-bottom: 10px; /* Add padding to create space below the text */
 }
+/* .subscriptions ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 26px 0px 26px 26px !important;
+  border: 1px solid transparent;
+  background: linear-gradient(270deg, #1176c921, #1176c9cf) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+} */
+/* .add-News {
+  transition: all 0.3s ease-in-out;
+  border-radius: 26px;
+}
+.add-News:hover {
+  width: 18rem;
+  border: 1px #ffb505 solid;
+  border-radius: 26px;
+  box-shadow: 0px 0px 12px rgba(255, 190, 3, 0.2);
+} */
 </style>
