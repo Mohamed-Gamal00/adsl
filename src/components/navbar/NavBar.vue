@@ -1,8 +1,12 @@
 <template>
   <!-- Navbar & Hero Start -->
   <!-- <div class="style sticky-top"> -->
+
   <div class="style">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav
+      class="navbar navbar-expand-lg navbar-light p-0"
+      style="position: relative; top: 40px"
+    >
       <div class="container">
         <router-link class="navbar-brand" :to="{ name: 'home' }">
           <img
@@ -51,7 +55,7 @@
             >
           </div>
 
-          <router-link class="m-2 border-0" :to="{ name: 'ordernow' }" exact>
+          <router-link class="border-0" :to="{ name: 'ordernow' }" exact>
             <button
               style="
                 background-color: #ffbe03;

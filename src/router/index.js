@@ -98,6 +98,12 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/ProductDetailsView.vue"),
   },
   {
+    path: "/login",
+    name: "login",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/LoginView.vue"),
+  },
+  {
     path: "/servererror",
     name: "servererror",
     component: ServerError,

@@ -4,49 +4,54 @@
       <PageLoader />
     </div>
   </div> -->
-  <div class="home" style="direction: rtl" id="home">
+  <div class="bg-header vh-100" style="direction: rtl">
     <!-- text and image -->
-    <NavBarCom />
-    <div
-      class="container-fluid bg-header row align-items-center vh-100 m-0 p-0"
-    >
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-10">
-          <div class="row align-items-center justify-content-between mb-2">
-            <div class="col-lg-5 fw-bold align-middle text-center text-lg-end">
-              <h1 class="pb-3 lh-lg" style="color: #1f1e1e">
-                <strong>
-                  سجل الأن واحصل علي <span style="color: #3aa8f5">شريحتك</span>
-                </strong>
-              </h1>
-              <p class="pb-3" style="color: #1f1e1e">
-                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                هذا النص من مولد النص العربى
-              </p>
-              <button
-                style="
-                  background-color: #ffbe03;
-                  width: 160px;
-                  height: 50px;
-                  border-radius: 12px;
-                "
-                class="btn fw-bold mb-4 text-dark"
+    <div class="container-fluid">
+      <NavBarCom />
+      <div class="row align-items-center vh-100 m-0 p-0">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10">
+            <div class="row align-items-center justify-content-between mb-2">
+              <div
+                class="col-lg-5 fw-bold align-middle text-center text-lg-end"
               >
-                <!-- <FontAwesome icon="circle-arrow-left" class="ms-2" /> -->
-                تسجيل دخول
-              </button>
-            </div>
-            <div class="col-lg-6 text-center mt-sm-4 text-lg-start">
-              <!-- <img loading="lazy"
-                class="img-fluid rounded-3"
-                src="../../assets/adsl/img1.png"
-                alt="img"
-              /> -->
+                <h1 class="pb-3 lh-lg" style="color: #1f1e1e">
+                  <strong>
+                    سجل الأن واحصل علي
+                    <span style="color: #3aa8f5">شريحتك</span>
+                  </strong>
+                </h1>
+                <p class="pb-3" style="color: #1f1e1e">
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى
+                </p>
+                <button
+                  style="
+                    background-color: #ffbe03;
+                    width: 160px;
+                    height: 50px;
+                    border-radius: 12px;
+                  "
+                  class="btn fw-bold mb-4 text-dark"
+                >
+                  <!-- <FontAwesome icon="circle-arrow-left" class="ms-2" /> -->
+                  تسجيل دخول
+                </button>
+              </div>
+              <div class="col-lg-6 text-center mt-sm-4 text-lg-start">
+                <!-- <img loading="lazy"
+                  class="img-fluid rounded-3"
+                  src="../../assets/adsl/img1.png"
+                  alt="img"
+                /> -->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="home" style="direction: rtl" id="home">
     <!-- section 2 -->
     <section class="py-5">
       <div class="container">
@@ -116,7 +121,7 @@
           <div class="col-md-10">
             <div class="row justify-content-around text-center">
               <div
-                class="col-md-3"
+                class="col-md-3 my-3"
                 v-for="subscrip in subscriptions"
                 :key="subscrip.id"
               >
@@ -177,7 +182,9 @@
                     المضافة حديثاً
                   </h3>
                 </strong>
-                <span class="float-start fw-bold" style="color: #3aa8f5"
+                <span
+                  class="text-center float-lg-start fw-bold"
+                  style="color: #3aa8f5"
                   >عرض الكل</span
                 >
               </div>
@@ -541,7 +548,7 @@ a {
   border-image: linear-gradient(to right, #ffffff05, white) 1;
   padding-bottom: 10px; /* Add padding to create space below the text */
 }
-/* .subscriptions ::before {
+.subscriptions ::before {
   content: "";
   position: absolute;
   top: 0;
@@ -554,8 +561,8 @@ a {
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
-} */
-/* .add-News {
+}
+.add-News {
   transition: all 0.3s ease-in-out;
   border-radius: 26px;
 }
@@ -564,5 +571,5 @@ a {
   border: 1px #ffb505 solid;
   border-radius: 26px;
   box-shadow: 0px 0px 12px rgba(255, 190, 3, 0.2);
-} */
+}
 </style>

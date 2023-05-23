@@ -17,7 +17,7 @@
                       <span class="">
                         <img
                           loading="lazy"
-                          src="@/assets/adsl/logo.png"
+                          src="@/assets/adsl/logofooter.png"
                           width="100"
                           height="100"
                           alt="img"
@@ -149,6 +149,10 @@
                               target="_blank"
                               aria-label="facebook"
                               href="#"
+                              style="
+                                background-color: #2e9ae8;
+                                color: white !important;
+                              "
                               ><FontAwesome icon="phone-volume"
                             /></a>
                           </div>
@@ -158,6 +162,7 @@
                               target="_blank"
                               aria-label="linkedin"
                               href="#"
+                              style="background-color: #ffbe03"
                               ><FontAwesome :icon="['fab', 'whatsapp']"
                             /></a>
                           </div>
